@@ -92,33 +92,90 @@
     }
     
     .hero-content {
-      max-width: 800px;
+      max-width: 900px;
       padding: 0 20px;
       z-index: 2;
     }
-    
+
     .hero h1 {
       font-size: 3.5rem;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       text-transform: uppercase;
       letter-spacing: 2px;
       animation: fadeInDown 1s ease;
     }
-    
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      animation: fadeInDown 1s ease 0.2s both;
+    }
+
     .hero p {
       font-size: 1.2rem;
-      margin-bottom: 30px;
-      animation: fadeInUp 1s ease 0.3s both;
+      margin-bottom: 40px;
+      animation: fadeInUp 1s ease 0.4s both;
     }
-    
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 50px;
+      animation: fadeInUp 1s ease 0.6s both;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      animation: fadeInUp 1s ease 0.8s both;
+    }
+
+    .hero-stats .stat-item {
+      text-align: center;
+      color: white;
+    }
+
+    .hero-stats .stat-number {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 5px;
+    }
+
+    .hero-stats .stat-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
     .btn-primary {
       background-color: var(--primary);
       border: none;
-      padding: 12px 30px;
+      padding: 15px 40px;
       font-weight: 600;
       border-radius: 30px;
       transition: all 0.3s;
-      animation: fadeInUp 1s ease 0.6s both;
+    }
+
+    .btn-outline-light {
+      border: 2px solid white;
+      color: white;
+      padding: 15px 40px;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: all 0.3s;
+    }
+
+    .btn-outline-light:hover {
+      background-color: white;
+      color: var(--secondary);
     }
     
     .btn-primary:hover {
@@ -622,7 +679,21 @@
       .hero h1 {
         font-size: 2rem;
       }
-      
+
+      .hero-tagline {
+        font-size: 1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+      }
+
       .section-title h2 {
         font-size: 2rem;
       }
@@ -655,9 +726,27 @@
   <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="hero-content">
-      <h1>Transform Your Body, Transform Your Life</h1>
-      <p>Join our premium fitness community and achieve your goals with expert trainers, state-of-the-art equipment, and a supportive environment.</p>
-      <a href="#pricing" class="btn btn-primary btn-lg">Start Your Journey Today</a>
+      <h1>Elite Fitness Training & Wellness Center</h1>
+      <p class="hero-tagline">Certified Personal Trainers • State-of-the-Art Facilities • Results-Driven Programs</p>
+      <p>Experience premium fitness with certified professionals, cutting-edge equipment, and personalized training programs designed for optimal results.</p>
+      <div class="hero-buttons">
+        <a href="#pricing" class="btn btn-primary btn-lg">Start Your Transformation</a>
+        <a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">5000+</span>
+          <span class="stat-label">Members</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Certified Trainers</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15</span>
+          <span class="stat-label">Locations</span>
+        </div>
+      </div>
     </div>
   </section>
 
